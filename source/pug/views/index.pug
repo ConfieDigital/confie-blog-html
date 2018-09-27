@@ -7,61 +7,60 @@ block title
 block description
     meta(name='description', content='Page description')
 block content
-    .cb-index.cb-container
-        nav.cb-breadcrumb
-            ul
-                li: a(href='./') Home
-                li: span.cb-breadcrumb__current Confie Blog
-        .cb-hero
-            ul.cb-hero__slider
-                - var counter = 1
-                while counter < 5
-                    li.cb-hero__item
-                        article.cb-hero__article.cb-hero-article(style='background-image:(images/hero-image.jpg)')
-                            h2.cb-hero-article__title How to Boost Your Confidence in the Workplace
-                            .cb-hero-article__content
-                                p If you feel timid, meek, or less adapted than others to the workplace.
-                            a.cb-hero-article__more(href='blog-entry.html')
-                                span Read More
-                                span.visually-hidden About How to Boost Your Confidence in the Workplace
-                                - counter++
-        ul.cb-post-list
-            mixin post-preview(image, category, title, content)
-                article.cb-post-preview
-                    h2.cb-post-preview__title= title
-                    a.cb-post-preview__category(href='#')= category
-                    img.cb-post-preview__image(src='images/'+ image + '.jpg', alt='', srcset='images/'+ image + '@2x.jpg 2x')
-                    .cb-post-preview__content
-                        p= content
-                    a.cb-post-preview__more(href='blog-entry')
-                        span Read more
-                        span.visually-hidden about #{title.toLowerCase()}
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Car Insurance', 'How to Handle Tough Conversations with Colleagues', 'If you know a tough conversation is imminent at work, you may feel a flood of anxiety over initiating it.  the right frame of mind You’ve already categorized the conversation as “tough” in your mind...')
-            li.cb-post-list__item
-                +post-preview('ima-2', 'Security Car', 'Features You Need in a Smart Home Security System', 'Investing in a smart home security system will give you the peace of mind you need when you’re away from home. With features that go far beyond traditional security systems, these smart devices give you complete control...')
-            li.cb-post-list__item
-                +post-preview('ima-3', 'Home and Work', 'How to Avoid Termite Damage in Your Home', 'Termites w your home structurally unstable, doing their work undiscovered and for long periods of time are signs that termites may have infested your home...')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Car Insurance', 'What You Can Do to Improve Workplace Morale', 'According to a 2017 study completed by Gallup, 51 percent of employees feel disengaged at work and feel no real connection to their careers... ')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Accidents', '4 Ways to Reduce Waste at Work', 'The EPA estimates that Americans generate over 254 million to a landfill. On the individual level, this equates to 4.4 pounds of waste per person a day...')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Locations', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'If you know a tough conversation is imminent at work,  of anxiety over. Here are ways to handle the uneasiness and put yourself in the right frame of mind try reframing it as “constructive” or “sincere... ')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Auto Insurance', '4 Ways to Reduce Waste at Work', 'According to a 2017 study completed by Gallup, 51 percent of disengaged at work and feel no real connection to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Commercial Insurance', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'According to a 2017 study completed by Gallup, 51 percent of employees to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
-            li.cb-post-list__item
-                +post-preview('ima-1', 'Broad Form', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'According to a 2017 study completed by Gallup, 51 percent of employees to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
-        nav.cb-post-list__pager.cb-pager
-            ul.cb-pager__list
-                li.cb-pager__item: a.cb-pager__link.cb-pager__link_control.cb-pager__link_prev(href='#') Back
-                li.cb-pager__item: a.cb-pager__link.cb-pager__link_current(href='#') 1
-                li.cb-pager__item: a.cb-pager__link(href='#') 2
-                li.cb-pager__item: a.cb-pager__link(href='#') 3
-                li.cb-pager__item: span.cb-pager__dots ...
-                li.cb-pager__item: a.cb-pager__link(href='#') 9
-                li.cb-pager__item: a.cb-pager__link(href='#') 10
-                li.cb-pager__item: span.cb-pager__count 1 of 10
-                li.cb-pager__item: a.cb-pager__link.cb-pager__link_control.cb-pager__link_next(href='#') Next
+    nav.cb-breadcrumb
+        ul
+            li: a(href='./') Home
+            li: span.cb-breadcrumb__current Confie Blog
+    .cb-hero
+        ul.cb-hero__slider
+            - var counter = 1
+            while counter < 5
+                li.cb-hero__item
+                    article.cb-hero__article.cb-hero-article(style='background-image:(images/hero-image.jpg)')
+                        h2.cb-hero-article__title How to Boost Your Confidence in the Workplace
+                        .cb-hero-article__content
+                            p If you feel timid, meek, or less adapted than others to the workplace.
+                        a.cb-hero-article__more(href='blog-entry.html')
+                            span Read More
+                            span.visually-hidden About How to Boost Your Confidence in the Workplace
+                            - counter++
+    ul.cb-post-list
+        mixin post-preview(image, category, title, content)
+            article.cb-post-preview
+                h2.cb-post-preview__title= title
+                a.cb-post-preview__category(href='#')= category
+                img.cb-post-preview__image(src='images/'+ image + '.jpg', alt='', srcset='images/'+ image + '@2x.jpg 2x')
+                .cb-post-preview__content
+                    p= content
+                a.cb-post-preview__more(href='blog-entry')
+                    span Read more
+                    span.visually-hidden about #{title.toLowerCase()}
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Car Insurance', 'How to Handle Tough Conversations with Colleagues', 'If you know a tough conversation is imminent at work, you may feel a flood of anxiety over initiating it.  the right frame of mind You’ve already categorized the conversation as “tough” in your mind...')
+        li.cb-post-list__item
+            +post-preview('ima-2', 'Security Car', 'Features You Need in a Smart Home Security System', 'Investing in a smart home security system will give you the peace of mind you need when you’re away from home. With features that go far beyond traditional security systems, these smart devices give you complete control...')
+        li.cb-post-list__item
+            +post-preview('ima-3', 'Home and Work', 'How to Avoid Termite Damage in Your Home', 'Termites w your home structurally unstable, doing their work undiscovered and for long periods of time are signs that termites may have infested your home...')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Car Insurance', 'What You Can Do to Improve Workplace Morale', 'According to a 2017 study completed by Gallup, 51 percent of employees feel disengaged at work and feel no real connection to their careers... ')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Accidents', '4 Ways to Reduce Waste at Work', 'The EPA estimates that Americans generate over 254 million to a landfill. On the individual level, this equates to 4.4 pounds of waste per person a day...')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Locations', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'If you know a tough conversation is imminent at work,  of anxiety over. Here are ways to handle the uneasiness and put yourself in the right frame of mind try reframing it as “constructive” or “sincere... ')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Auto Insurance', '4 Ways to Reduce Waste at Work', 'According to a 2017 study completed by Gallup, 51 percent of disengaged at work and feel no real connection to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Commercial Insurance', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'According to a 2017 study completed by Gallup, 51 percent of employees to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
+        li.cb-post-list__item
+            +post-preview('ima-1', 'Broad Form', 'Current retail footprint includes 19 states, with nearly 800 retail locations', 'According to a 2017 study completed by Gallup, 51 percent of employees to their careers. These people usually don\'t work as hard as others, often doing just the bare minimum during their eight-hour shift...')
+    nav.cb-post-list__pager.cb-pager
+        ul.cb-pager__list
+            li.cb-pager__item: a.cb-pager__link.cb-pager__link_control.cb-pager__link_prev(href='#') Back
+            li.cb-pager__item: a.cb-pager__link.cb-pager__link_current(href='#') 1
+            li.cb-pager__item: a.cb-pager__link(href='#') 2
+            li.cb-pager__item: a.cb-pager__link(href='#') 3
+            li.cb-pager__item: span.cb-pager__dots ...
+            li.cb-pager__item: a.cb-pager__link(href='#') 9
+            li.cb-pager__item: a.cb-pager__link(href='#') 10
+            li.cb-pager__item: span.cb-pager__count 1 of 10
+            li.cb-pager__item: a.cb-pager__link.cb-pager__link_control.cb-pager__link_next(href='#') Next
