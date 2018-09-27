@@ -2,17 +2,6 @@
 //=require jquery/dist/jquery.min.js
 //=require slick-carousel/slick/slick.min.js
 
-// Check Email
-function checkEmail(email){
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-    if (!filter.test(email)) {
-        return false;
-    }else{
-        return true;
-    }
-}
-
 // DOM
 var MyApp = {
     home : {

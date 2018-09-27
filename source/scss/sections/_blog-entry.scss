@@ -1,0 +1,276 @@
+.cb-entry {
+    &__header {
+        height: 252px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        @include min-screen($tp) {
+        height: 305px;
+        }
+        @include min-screen($tl) {
+            padding: 20px 34px 82px;
+            height: 355px;
+            justify-content: flex-start;
+        }
+        @include min-screen($d) {
+            height: 405px;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__header-box {
+        background-color: rgba(#fff, 0.8);
+        padding: 15px 20px;
+        border-radius: 3px;
+        max-width: 464px;
+        @include min-screen($tp) {
+            padding: 30px 20px;
+        }
+        @include min-screen($tl) {
+            padding: 40px 30px;
+        }
+    }
+
+    &__title {
+        $ifz: 18px;
+        $ffz: 24px;
+        $plus: round(($ffz - $ifz)/3);
+        font-size: $ifz;
+        color: $color_blue;
+        font-family: $font_bold;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        @include min-screen($tp) {
+            font-size: $ifz + $plus;
+        }
+        @include min-screen($tl) {
+            font-size: $ifz + $plus*2;
+        }
+        @include min-screen($tp) {
+            font-size: $ffz;
+        }
+    }
+
+    &__author, &__date {
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    &__content {
+        padding: 35px 0;
+        max-width: 805px;
+        margin: 0 auto;
+        @include min-screen($tl) {
+            padding: 60px 0;
+        }
+
+        h3 {
+            text-align: center;
+            $ifz: 17px;
+            $ffz: 24px;
+            $plus: round(($ffz - $ifz)/3);
+            font-size: $ifz;
+            color: $color_blue;
+            font-family: $font_bold;
+            margin-bottom: 20px;
+            @include min-screen($tp) {
+                font-size: $ifz + $plus;
+            }
+            @include min-screen($tl) {
+                font-size: $ifz + $plus*2;
+            }
+            @include min-screen($tp) {
+                font-size: $ffz;
+            }
+        }
+
+        h4 {
+            text-align: center;
+            $ifz: 15px;
+            $ffz: 19px;
+            $plus: round(($ffz - $ifz)/3);
+            font-size: $ifz;
+            color: $color_blue;
+            font-family: $font_bold;
+            margin-bottom: 20px;
+            @include min-screen($tp) {
+                font-size: $ifz + $plus;
+            }
+            @include min-screen($tl) {
+                font-size: $ifz + $plus*2;
+            }
+            @include min-screen($tp) {
+                font-size: $ffz;
+            }
+        }
+
+        p, ul, ol, img {
+            + h3, + h4 {
+                margin-top: 35px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                @include min-screen($tl) {
+                    margin-top: 60px;
+                }
+            }
+        }
+
+        p, li {
+            font-size: 15px;
+            line-height: 1.71;
+            text-align: justify;
+            margin: 0 0 25px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @include min-screen($tl) {
+                margin-bottom: 60px;
+            }
+        }
+
+        ul, ol {
+            padding-left: 30px;
+            margin: 25px auto;
+            @include min-screen($tl) {
+                padding-left: 80px;
+                max-width: 650px;
+            }
+        }
+
+        li {
+            margin-bottom: 0;
+            @include min-screen($tl) {
+                margin-bottom: 0;
+            }
+        }
+
+        strong, b {
+            font-family: $font_bold;
+        }
+
+        i {
+            font-style: italic;
+            font-family: $font_semibold;
+        }
+
+        a {
+            color: $color_blue;
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+        }
+    }
+
+    &__back {
+        text-align: center;
+        width: 100%;
+        margin-top: 27px;
+        @include min-screen($tl) {
+            margin-top: 75px;
+        }
+
+        a {
+            display: inline-flex;
+            height: 50px;
+            padding: 15px 44px;
+            font-size: 16px;
+            font-family: $font_bold;
+            border-radius: 7px;
+            border: solid 2px $color_blue;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease-in;
+
+            &:hover {
+                background-color: $color_blue;
+                color: #fff;
+                transition: background-color 0.2s ease, color 0.2s ease-in;
+            }
+        }
+    }
+}
+
+.cb-entry-other-content {
+    margin-top: 15px;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    @include min-screen($tl) {
+        padding: 68px 0 45px;
+    }
+
+    &__title {
+        text-align: center;
+        $ifz: 17px;
+        font-size: $ifz;
+        color: $color_blue;
+        text-transform: uppercase;
+        font-family: $font_bold;
+    }
+
+    ul {
+        margin: 34px 0 0;
+        padding: 0;
+        list-style: none;
+        @include min-screen($tp) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        @include min-screen($tl) {
+            margin-top: 56px;
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 47px;
+        width: 100%;
+        @include min-screen($tp) {
+            width: calc(33.33% - 36px);
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h3 {
+        order: 1;
+        text-align: center;
+        width: 100%;
+        $ifz: 17px;
+        font-size: $ifz;
+        color: $color_blue;
+        text-transform: uppercase;
+        font-family: $font_semibold;
+    }
+
+    img {
+        order: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+        display: block;
+        @include min-screen($tl) {
+            margin-bottom: 34px;
+        }
+    }
+}

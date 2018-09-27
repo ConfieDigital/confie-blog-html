@@ -4,6 +4,10 @@
     /* No bold in Mac. */
     box-sizing: border-box;
     font-weight: normal;
+
+    &:focus {
+        outline: 2px solid orange;
+    }
 }
 
 body {
