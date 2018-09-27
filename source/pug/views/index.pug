@@ -7,4 +7,21 @@ block title
 block description
     meta(name='description', content='Page description')
 block content
-            
+    .cb-container
+        nav.cb-breadcrumb
+            ul
+                li: a(href='./') Home
+                li: span.cb-breadcrumb__current Confie Blog
+        .cb-hero
+            ul.cb-hero__slider
+                - var counter = 1
+                while counter < 5
+                    li.cb-hero__item
+                        article.cb-hero__article.cb-hero-article(style='background-image:(images/hero-image.jpg)')
+                            h2.cb-hero-article__title How to Boost Your Confidence in the Workplace
+                            .cb-hero-article__content
+                                p If you feel timid, meek, or less adapted than others to the workplace.
+                            a.cb-hero-article__more(href='blog-entry.html')
+                                span Read More
+                                span.visually-hidden About How to Boost Your Confidence in the Workplace
+                                - counter++
