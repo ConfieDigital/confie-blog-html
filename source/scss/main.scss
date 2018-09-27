@@ -8,12 +8,17 @@
 @import 'project-dependencies/fonts';
 
 // JS dependencies
+@import '../../node_modules/slick-carousel/slick/slick.scss';
 
 // Patterns
 @import 'patterns/general';
 @import 'patterns/layout';
+@import 'patterns/breadcrumbs';
+@import 'patterns/pager';
 @import 'patterns/buttons';
 
 // Sections
 @import 'sections/header';
+@import 'sections/hero-slider';
+@import 'sections/post-list';
 @import 'sections/footer';

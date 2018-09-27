@@ -1,9 +1,16 @@
 // Fonts
-$font_regular: '';
-$font_light: '';
-$font_bold: '';
+$font_light: 'OpenSans-Light';
+$font_semibold: 'OpenSans-Semibold';
+$font_bold: 'OpenSans-Bold';
 
 // Colors
+
+ $color_grey: #404040;
+ $color_blue: #004b96;
+ $color_white: #ffffff;
+ $color_pale-grey: #f3f6f9;
+ $color_light-navy: #19456d;
+ $color_greenish: #378f55;
 
 // Messures
 
@@ -12,7 +19,7 @@ $mobile-portrait: 320px;
 $mobile-lanscape: 530px;
 $tablet-portrait: 700px;
 $tablet-lanscape: 830px;
-$desktop: 1000px;
+$desktop: 1108px;
 
 $mp: $mobile-portrait;
 $ml: $mobile-lanscape;

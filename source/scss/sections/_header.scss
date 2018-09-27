@@ -1,0 +1,29 @@
+.cb-site-header {
+    background-color: #fff;
+    padding: 20px 0;
+    @include min-screen($tl) {
+        padding: 14px 0;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        width: 122px;
+        height: auto;
+        display: block;
+        @include min-screen($tp) {
+            width: 142px;
+        }
+        @include min-screen($tl) {
+            width: 172px;
+        }
+        @include min-screen($d) {
+            width: 192px;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.cb-pager {
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    &__item {
+        height: 42px;
+        
+        margin-left: 10px;
+
+        &_desktop {
+            display: none;
+            @include min-screen($tl) {
+                display: block;
+            }
+        }
+
+        &_mobile{
+            display: block;
+            @include min-screen($tl) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: trasparent;
+        border: solid 1px #e1e1e1;
+        transition: all 0.2s ease;
+        height: 100%;
+        text-decoration: none;
+
+        &:hover, &_current {
+            border: solid 1px $color_blue;
+            background-color: $color_blue;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+    }
+
+    &__dots {
+        display: none;
+        font-size: 16px;
+        height: 100%;
+        vertical-align: bottom;
+        padding-top: 12px;
+        @include min-screen($tl) {
+            display: block;
+        }
+    }
+
+    &__count {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px;
+        color: #fff;
+        background-color: $color_blue;
+        margin: 0 10px;
+        font-size: 16px;
+        @include min-screen($tl) {
+            display: none;
+        }
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #fff;        
+        border: solid 1px #e1e1e1;
+        min-width: 100px;
+        transition: background-color 0.2s ease, border 0.2s ease-in;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+            background-color: $color_pale-grey;
+            transition: background-color 0.2s ease, border 0.2s ease-in;
+            border: solid 1px $color_pale-grey;
+        }
+    }
+}

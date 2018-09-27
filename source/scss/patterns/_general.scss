@@ -7,7 +7,8 @@
 }
 
 body {
-    font-family: $font_regular;
+    font-family: $font_light, Arial, Helvetica, sans-serif;
+    color: $color_grey;
 }
   
 h1,h2,h3,h4,h5,h6 {

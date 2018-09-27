@@ -1,0 +1,44 @@
+.cb-breadcrumb {
+    padding: 18px 0;
+    @include min-screen($tp) {
+        padding: 38px 0 9px;
+    }
+    @include min-screen($tl) {
+        padding: 48px 0 9px;
+    }
+    @include min-screen($d) {
+        padding: 58px 0 9px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        font-family: $font_semibold;
+        &:not(:last-child)::after {
+            content: '>';
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        transition: color 0.2s ease;
+        font-size: 15px;
+
+        &:hover {
+            color: $color_blue;
+            transition: color 0.2s ease;
+        }
+    }
+
+    &__current {
+        color: $color_blue;
+    }
+}
