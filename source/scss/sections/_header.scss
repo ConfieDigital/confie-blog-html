@@ -2,7 +2,7 @@
     background-color: #fff;
     padding: 20px 0;
     @include min-screen($tl) {
-        padding: 14px 0;
+        padding: 14px 0 0;
     }
 
     &__container {
@@ -10,17 +10,31 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        flex-direction: column;
+        @include min-screen(820px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__navigation {
+        width: 100%;
+        @include min-screen(820px) {
+            width: auto;
+        }
     }
 
     &__logo {
         width: 122px;
         height: auto;
         display: block;
+        margin-bottom: 20px;
         @include min-screen($tp) {
             width: 142px;
         }
         @include min-screen($tl) {
             width: 172px;
+            margin-bottom: 0;
         }
         @include min-screen($d) {
             width: 192px;
