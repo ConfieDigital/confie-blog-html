@@ -36,6 +36,35 @@
             padding: 40px 30px;
         }
     }
+    &__info {
+        border-bottom: 1px solid #ebebeb;
+        padding: 20px 5px;
+        max-width: 805px;
+        margin: 0 auto;
+        @include min-screen($tl) {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__entry-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    &__share {
+        margin-top: 24px;
+        width: 100%;
+        @include min-screen($tl) {
+            width: auto;
+            margin-top: 0;
+        }
+    }
 
     &__title {
         $ifz: 18px;
@@ -60,6 +89,12 @@
     &__author, &__date {
         font-size: 14px;
         font-style: italic;
+    }
+
+    &__author {
+        border-right: 1px solid #404040;
+        margin-right: 10px;
+        padding-right: 10px;
     }
 
     &__content {
@@ -180,10 +215,6 @@
     &__controls {
         margin: 50px 0 0;
         @include min-screen($tl) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
             margin-top: 80px;
         }
     }
