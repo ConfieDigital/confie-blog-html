@@ -12,8 +12,9 @@
 
     &__item {
         height: 42px;
-        
-        margin-left: 10px;
+        @include min-screen($tl) {
+            margin-left: 10px;
+        }
 
         &_desktop {
             display: none;

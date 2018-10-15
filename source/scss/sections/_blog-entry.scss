@@ -67,7 +67,7 @@
         max-width: 805px;
         margin: 0 auto;
         @include min-screen($tl) {
-            padding: 60px 0;
+            padding: 60px 0 40px;
         }
 
         h3 {
@@ -124,7 +124,7 @@
             }
         }
 
-        p, li {
+        p, li:not(.share-links__item) {
             font-size: 15px;
             line-height: 1.71;
             text-align: justify;
@@ -139,7 +139,7 @@
             }
         }
 
-        ul, ol {
+        ul:not(.share-links__list), ol {
             padding-left: 30px;
             margin: 25px auto;
             @include min-screen($tl) {
@@ -148,7 +148,7 @@
             }
         }
 
-        li {
+        li:not(.share-links__item) {
             margin-bottom: 0;
             @include min-screen($tl) {
                 margin-bottom: 0;
@@ -177,12 +177,24 @@
         }
     }
 
+    &__controls {
+        margin: 50px 0 0;
+        @include min-screen($tl) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 80px;
+        }
+    }
+
     &__back {
         text-align: center;
         width: 100%;
-        margin-top: 27px;
+        margin-top: 38px;
         @include min-screen($tl) {
-            margin-top: 75px;
+            margin-top: 0;
+            width: auto;
         }
 
         a {
@@ -210,7 +222,7 @@
     padding: 30px 0;
     border-top: 1px solid #ccc;
     @include min-screen($tl) {
-        padding: 68px 0 45px;
+        padding: 50px 0 45px;
     }
 
     &__title {
@@ -271,6 +283,58 @@
         display: block;
         @include min-screen($tl) {
             margin-bottom: 34px;
+        }
+    }
+}
+
+.share-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        margin-right: 20px;
+        font-family: $font_semibold;
+        font-size: 18px;
+        color: $color_blue;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 14px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+
+        &:hover path {
+            fill:none;
+            stroke:#004b96;
+            stroke-width:2;
+            stroke-miterlimit:10;
+            transition: all 0.2s ease;
+        }
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        path {
+            fill: $color_blue;
+            transition: all 0.2s ease;
         }
     }
 }
